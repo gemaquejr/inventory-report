@@ -23,8 +23,8 @@ class Inventory():
     def import_xml(path):
         with open(path) as file:
             data_xml = file.read()
-            path_xml = xmltodict.parse(data_xml)
-            return path_xml
+            path_xml = xmltodict.parse(data_xml)["dataset"]
+            return path_xml["record"]
 
     @classmethod
     def import_data(cls, path, type):
