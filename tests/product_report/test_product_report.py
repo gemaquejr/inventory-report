@@ -12,6 +12,7 @@ def test_relatorio_produto():
         "seco e conservado",
     )
 
+    # https://pt.stackoverflow.com/questions/201701/afinal-para-que-serve-a-fun%C3%A7%C3%A3o-repr-no-python
     assert repr(mockProduct) == (
         f"O produto {mockProduct.nome_do_produto}"
         f" fabricado em {mockProduct.data_de_fabricacao}"
