@@ -7,7 +7,7 @@ class CompleteReport(SimpleReport):
         report = super().generate(file)
         stock_products = cls.company_filter(file)
         report += "\nProdutos estocados por empresa:\n"
-        for cidade, vezes in stock_products.items():
-            report += f"- {cidade}: {vezes}\n"
+        for company, times in stock_products.items():
+            report += f"- {company}: {times}\n"
 
         return report
